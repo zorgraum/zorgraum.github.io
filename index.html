@@ -6,42 +6,52 @@
     <title>About - Project Name</title>
     <style>
 		
-	/* 1. Define the custom font */
-	@font-face {
-		font-family: 'NewRailAlphabet';
-		src: url('font/NewRailAlphabet-White.ttf') format('truetype');
-		font-weight: normal;
-		font-style: normal;
-	}
+	/* 1. Define the regular font */
+@font-face {
+    font-family: 'NewRailAlphabet';
+    src: url('font/NewRailAlphabet-White.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-	/* 2. Apply it to the entire document */
-	body {
-		margin: 0;
-		padding: 0;
-		font-family: 'NewRailAlphabet', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-		background-color: #fff;
-		color: #000;
-		line-height: 1.4;
-	}
+/* 2. Define the separate bold font file */
+@font-face {
+    font-family: 'NewRailAlphabetBold';
+    src: url('font/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: normal; /* We set this to normal so the browser doesn't try to 'double-bold' it */
+    font-style: normal;
+}
 
-        /* Base Reset & Typography */
-        * { box-sizing: border-box; }
-        html { font-size: 16px; }
-        
-        body {
-            margin: 0;
-            padding: 0;
-		    font-family: 'NewRailAlphabet', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #fff;
-            color: #000;
-            line-height: 1.4;
-        }
+/* 3. Apply the base font to the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'NewRailAlphabet', sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.4;
+}
+
+/* 4. Force <b> and <strong> tags to use the specific bold font file */
+b, strong {
+    font-family: 'NewRailAlphabetBold', sans-serif;
+    font-weight: regular; /* This ensures the browser uses the literal shapes in the .otf file */
+}
 
         /* Layout Structure */
         .wrapper {
             display: flex;
             min-height: 100vh;
+            flex-direction: column;
         }
+        
+        /* This pushes the about-section to the bottom */
+		.about-section {
+			margin-top: auto; 
+			padding-bottom: 2rem; /* Optional: adds some breathing room at the very bottom */
+			font-size: 0.9rem;
+			
+		}
 
         /* Left Sidebar (Navigation) */
         nav {
@@ -52,6 +62,10 @@
             height: 100vh;
             overflow-y: auto;
             border-right: 1px solid #f0f0f0;
+            
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
         }
 
         /* Right Content Area */
@@ -94,7 +108,7 @@
         }
 
         .show-title {
-            font-style: italic;
+			font-family: 'NewRailAlphabetBold', sans-serif;
         }
 
         /* Grid for About Page */
@@ -147,28 +161,25 @@
                 <li class="show-item">
                     <a href="colourtheory.html">
                         <span class="show-title">Colour Theory</span><br>
-                        <b>Jelle Snijders, Pum van de Koppel</b><br>
+                        Jelle Snijders, Pum van de Koppel<br>
 
-                        February 20 - March 1, 2026
+                        <i>February 20 - March 1, 2026</i>
                     </a>
                 </li>
+                
+                   
             </ul>
-
-            <div style="margin-top: 3rem;">
-                <b>About</b>
-				<br> 
-				Van Linschotentraat 30
-				<br> 
-				1019PM Amsterdam
-				<br> 
-				Open on Saturdays and Sundays from 1-5 pm
-				<br> 
-				or by Appointment
-				<br> 
-
-
+			<div class="about-section">
+				
+                <b>About</b><br>
+                Van Linschotentraat 30<br>
+                1019PM Amsterdam<br>
+                Open on Saturdays and Sundays from 1-5 pm<br>
+                or by Appointment
 
             </div>
+
+
         </nav>
 
         
