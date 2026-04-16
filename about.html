@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Project Name</title>
+    <style>
+        /* 1. Define the regular font */
+        @font-face {
+            font-family: 'NewRailAlphabet';
+            src: url('font/NewRailAlphabet-White.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 2. Define the separate bold font file */
+        @font-face {
+            font-family: 'NewRailAlphabetBold';
+            src: url('font/NewRailAlphabet-Bold.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 3. Base Reset & Typography */
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'NewRailAlphabet', sans-serif;
+            background-color: #fff;
+            color: #000;
+            line-height: 1.4;
+        }
+
+        /* 4. Force <b> and <strong> tags to use the specific bold font file */
+        b, strong {
+            font-family: 'NewRailAlphabetBold', sans-serif;
+            font-weight: normal; 
+        }
+
+        /* Layout Structure */
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Left Sidebar (Navigation) */
+        nav {
+            width: 35%;
+            padding: 2rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid #f0f0f0;
+            
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        /* This pushes the about-section to the bottom */
+        .about-section {
+            margin-top: auto; 
+            padding-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Right Content Area */
+        main {
+            width: 65%;
+            padding: 2rem;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-size: 1.5rem;
+        }
+
+        .show-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .show-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .show-item a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .show-item a:hover {
+            text-decoration: underline;
+        }
+
+        .show-title {
+            font-family: 'NewRailAlphabetBold', sans-serif;
+        }
+
+        /* Grid for About Page */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .placeholder-img {
+            width: 100%;
+            height: auto;
+            background: #eee;
+            aspect-ratio: 3/4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.8rem;
+            border: 1px solid #ddd;
+        }
+
+        small {
+            font-size: 0.85rem;
+            display: block;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .wrapper { flex-direction: column; }
+            nav, main { width: 100%; height: auto; position: static; }
+            nav { border-right: none; border-bottom: 1px solid #f0f0f0; }
+            .about-section { margin-top: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav>
+            <ul class="show-list">                
+                <li class="show-item">
+                    <div class="logo"><b>zorgraum</b></div>
+                </li>
+
+                <li class="show-item">
+                    <a href="colourtheory.html">
+                        <span class="show-title">Colour Theory</span><br>
+                        Jelle Snijders, Pum van de Koppel<br>
+                        <i>February 20 - March 1, 2026</i>
+                    </a>
+                </li>
+            </ul>
+
+			<div class="about-section">
+				
+                <b>About</b><br>
+                Van Linschotentraat 30<br>
+                1019PM Amsterdam<br>
+                Open on Saturdays and Sundays from 1-5 pm<br>
+                or by Appointment<br>
+				<a href="mailto:zorg.raum@outlook.com">email</a> <br>
+				                <a href="http://www.instagram.com/zorgraum">instagram</a><br>
+			
+
+            </div>
+        </nav>
+
+        <main>
+            <div class="about-grid">
+                <div class="column">
+                    <div class="placeholder-img">
+                        [PLACEHOLDER FOR GALLERY IMAGE]
+                    </div>
+                </div>
+
+                <div class="column">
+                    <small>
+                        <b>Space Description:</b><br>
+                        Your Project Name is an independent space located in City, State. It is dedicated to supporting contemporary practices and community engagement. 
+                        <br><br>
+                        <b>Accessibility:</b><br>
+                        Describe the physical access to your space here (e.g., ground floor access, elevator, or stairs). Note any specific conditions of the environment.
+                        <br><br>
+                        <b>Hours:</b><br>
+                        Open by appointment and during event receptions.
+                    </small>
+                </div>
+
+                <div class="column">
+                    <small>
+                        <b>Address</b>
+                        123 Street Address<br>
+                        City, State, Zip
+                        <br><br>
+                        <b>Contact</b>
+                        email@example.com<br>
+                        <a href="#">Instagram</a>
+                    </small>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+```
