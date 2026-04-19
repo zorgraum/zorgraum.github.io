@@ -42,13 +42,12 @@
         /* Layout Structure */
         .wrapper {
             display: flex;
-			grid-template-columns: 35% 65%;
             min-height: 100vh;
         }
 
         /* Left Sidebar (Navigation) */
         nav {
-            
+            flex: 0 0 35%;
             padding: 2rem;
             position: sticky;
             top: 0;
@@ -114,7 +113,7 @@
         }
 
         .placeholder-img {
-            width: 90%;
+            width: 100%;
             height: auto;
 			overflow: hidden;
             background: #fff;
@@ -186,8 +185,6 @@
 
         <main>
             <div class="about-grid">
-                <div class="column">
-                   <div class="column">
 
     				<div class="placeholder-img">
      				   <img src="img/Pum AMS expo Mar 2026_4.jpg" alt="">
