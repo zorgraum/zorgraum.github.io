@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Project Name</title>
+    <style>
+        /* 1. Define the regular font */
+        @font-face {
+            font-family: 'NewRailAlphabet';
+            src: url('font/NewRailAlphabet-White.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 2. Define the separate bold font file */
+        @font-face {
+            font-family: 'NewRailAlphabetBold';
+            src: url('font/NewRailAlphabet-Bold.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 3. Base Reset & Typography */
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'NewRailAlphabet', sans-serif;
+            background-color: #fff;
+            color: #000;
+            line-height: 1.4;
+        }
+
+        /* 4. Force <b> and <strong> tags to use the specific bold font file */
+        b, strong {
+            font-family: 'NewRailAlphabetBold', sans-serif;
+            font-weight: normal; 
+        }
+
+        /* Layout Structure */
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Left Sidebar (Navigation) */
+        nav {
+            flex: 0 0 35%;
+            padding: 2rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid #ffffff;
+            
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        /* This pushes the about-section to the bottom */
+        .about-section {
+            margin-top: auto; 
+            padding-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Right Content Area */
+        main {
+           	flex: 1;
+    		min-width: 0;
+            padding: 2rem;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-size: 1.5rem;
+        }
+
+        .show-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .show-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .show-item a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .show-item a:hover {
+            text-decoration: underline;
+        }
+
+        .show-title {
+            font-family: 'NewRailAlphabetBold', sans-serif;
+        }
+
+        /* Grid for About Page */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .placeholder-img {
+            width: 100%;
+            height: auto;
+			overflow: hidden;
+            background: #fff;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.8rem;
+            border: 1px solid #fff;
+        }
+
+		.placeholder-img img {
+    		width: 100%;
+    		height: 100%;
+    		object-fit: cover;
+    		display: block;
+		}
+			.text-block {
+    		max-width: 123ch;
+    		font-size: 0.4rem;
+    		line-height: 1.2;
+		}
+
+        small {
+            font-size: 0.6rem;
+            display: block;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .wrapper { flex-direction: column; }
+            nav, main { width: 100%; height: auto; position: static; }
+            nav { border-right: none; border-bottom: 1px solid #f0f0f0; }
+            .about-section { margin-top: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav>
+            <ul class="show-list">                
+                <li class="show-item">
+                    <div class="logo">
+						<a href="/"><b>zorgraum</b></a></div>
+                </li>
+	
+					  <li class="show-item">
+                    <a href="second_sip.html">
+                        <span class="show-title">Second Sip</span><br>
+                        Æon Teunissen, Blake Zeroven, Clara Florke<br>
+
+                        <i>10 April - 26 April, 2026</i>
+                    </a>
+                </li>
+
+				
+                <li class="show-item">
+                    <a href="colour_theory.html">
+                        <span class="show-title">Colour Theory</span><br>
+                        Jelle Snijders, Pum van de Koppel<br>
+                        <i>20 February - 1 March, 2026</i>
+                    </a>
+                </li>
+            </ul>
+
+			<div class="about-section">
+				<a href="about.html" style="text-decoration: none; color: inherit; display: block;">
+                <b>About</b><br>
+                Van Linschotentraat 30<br>
+                1019PM Amsterdam<br>
+              
+			
+
+            </div>
+
+        </nav>
+
+        <main>
+            <div class="about-grid">
+				  <div class="column">
+                   <div class="column">
+
+    				<div class="placeholder-img">
+     				   <img src="img/оагна 5.jpg" alt="">
+ 			   </div>
+						<br>
+    				<div class="placeholder-img">
+        				<img src="img/оагна 1.jpg" alt="">
+    		</div>	
+					<br>
+    				<div class="placeholder-img">
+        				<img src="img/оагна 3.jpg" alt="">
+    			</div>
+					<br>
+    				<div class="placeholder-img">
+        				<img src="img/оагна 19.jpg" alt="">
+    			</div>
+					   <br>
+					   <div class="placeholder-img">
+        				<img src="img/оагна 13.jpg" alt="">
+    			</div>
+
+
+</div>
+</div>
+ </div>
+    <!-- TEXT BELOW -->
+    <div class="text-block">
+</div>
+        <br><b>Second Sip</b><br>
+             Æon Teunissen, Blake Zeroven, Clara Florke<br>
+             <i>10 April – 26 April, 2026</i>
+        </p>
+
+        <p>
+            Second Sip convenes 17 brunettes in a spatial arrangement defined by calibrated intensities, 
+			where gesture is held in a precise tension between assertion and restraint. Scale, material, 
+			and duration are continuously negotiated, producing an exhibition that does not resolve into 
+			spectacle but instead redistributes attention across a field of insistent yet withholding 
+			presences. Several works occupy the space with marked physical clarity—surfaces are rendered 
+			opaque, volumes reoriented, and luminous structures displaced from their expected hierarchies. 
+			These gestures anchor the exhibition while simultaneously diffusing focus, creating a condition 
+			in which what is encountered remains partial, contingent, and slightly out of reach.
+            <br><br>
+            Material is treated as a temporal register. Substances appear held in states of viscosity, 
+			residue, or near-exhaustion, while objects index moments that feel both ongoing and already elapsed. 
+			This produces a shared sense of latency: a continuous relation to what has just occurred and what 
+			cannot fully follow. Minimal means here operate not as reduction alone, but as concentration—each 
+			gesture carrying a heightened density. Light functions as a structuring principle. Natural luminosity 
+			enters insistently, diffused through altered surfaces, while artificial sources remain both 
+			infrastructural and estranged. Illumination disperses rather than directs, accumulating in gradients 
+			that destabilize fixed points of attention. In the lower register, light becomes more contained and 
+			fragmented, shifting toward a technical, almost diagrammatic condition. Sound and performance extend 
+			this logic into time. A vocal line reduced to repetition circulates as a minimal unit, while the body 
+			engages in a prolonged sequence that approaches fulfillment without resolution. Action is sustained 
+			at the threshold of completion.
+            <br><br>
+			Second Sip proposes a mode of attention attuned to such thresholds—between opacity and visibility, 
+			insistence and withdrawal. The “second sip” emerges as a recalibration: a return that sharpens 
+			perception while leaving the encounter unresolved.
+			<br><br><br><br>
+            Documentation by Kateryna Lymar
+			<br><br>
+        </p>
+
+        
+                    </small>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
