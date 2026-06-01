@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Project Name</title>
+    <style>
+        /* 1. Define the regular font */
+        @font-face {
+            font-family: 'NewRailAlphabet';
+            src: url('font/NewRailAlphabet-White.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 2. Define the separate bold font file */
+        @font-face {
+            font-family: 'NewRailAlphabetBold';
+            src: url('font/NewRailAlphabet-Bold.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 3. Base Reset & Typography */
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'NewRailAlphabet', sans-serif;
+            background-color: #fff;
+            color: #000;
+            line-height: 1.4;
+        }
+
+        /* 4. Force <b> and <strong> tags to use the specific bold font file */
+        b, strong {
+            font-family: 'NewRailAlphabetBold', sans-serif;
+            font-weight: normal; 
+        }
+
+        /* Layout Structure */
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Left Sidebar (Navigation) */
+        nav {
+            flex: 0 0 35%;
+            padding: 2rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid #ffffff;
+            
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        /* This pushes the about-section to the bottom */
+        .about-section {
+            margin-top: auto; 
+            padding-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Right Content Area */
+        main {
+           	flex: 1;
+    		min-width: 0;
+            padding: 2rem;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-size: 1.5rem;
+        }
+
+        .show-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .show-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .show-item a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .show-item a:hover {
+            text-decoration: underline;
+        }
+
+        .show-title {
+            font-family: 'NewRailAlphabetBold', sans-serif;
+        }
+
+        /* Grid for About Page */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .placeholder-img {
+            width: 100%;
+            height: auto;
+			overflow: hidden;
+            background: #fff;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.8rem;
+            border: 1px solid #fff;
+        }
+
+		.placeholder-img img {
+    		width: 100%;
+    		height: 100%;
+    		object-fit: cover;
+    		display: block;
+		}
+			.text-block {
+    		max-width: 123ch;
+    		font-size: 0.4rem;
+    		line-height: 1.2;
+		}
+
+        small {
+            font-size: 0.6rem;
+            display: block;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .wrapper { flex-direction: column; }
+            nav, main { width: 100%; height: auto; position: static; }
+            nav { border-right: none; border-bottom: 1px solid #f0f0f0; }
+            .about-section { margin-top: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav>
+            <ul class="show-list">                
+                <li class="show-item">
+                    <div class="logo">
+						<a href="/"><b>zorgraum</b></a></div>
+                </li>
+
+                <li class="show-item">
+                    <a href="colour_theory.html">
+                        <span class="show-title">Colour Theory</span><br>
+                        Jelle Snijders, Pum van de Koppel<br>
+                        <i>20 February - 1 March, 2026</i>
+                    </a>
+                </li>
+            </ul>
+
+			<div class="about-section">
+				<a href="about.html" style="text-decoration: none; color: inherit; display: block;">
+                <b>About</b><br>
+                Van Linschotentraat 30<br>
+                1019PM Amsterdam<br>
+              
+			
+
+            </div>
+
+        </nav>
+
+        <main>
+            <div class="about-grid">
+				  <div class="column">
+                   <div class="column">
+
+    				<div class="placeholder-img">
+     				   <img src="img/Pum AMS expo Mar 2026_4.jpg" alt="">
+ 			   </div>
+						<br>
+    				<div class="placeholder-img">
+        				<img src="img/Pum AMS expo Mar 2026_10.jpg" alt="">
+    		</div>	
+					<br>
+    				<div class="placeholder-img">
+        				<img src="img/Pum AMS expo Mar 2026_12.jpg" alt="">
+    			</div>
+					<br>
+    				<div class="placeholder-img">
+        				<img src="img/Pum AMS expo Mar 2026_21.jpg" alt="">
+    			</div>
+					   <br>
+					   <div class="placeholder-img">
+        				<img src="img/Pum AMS expo Mar 2026_22.jpg" alt="">
+    			</div>
+					  <br>
+    				<div class="placeholder-img">
+        				<img src="img/Pum AMS expo Mar 2026_27.jpg" alt="">
+    			</div>
+
+
+</div>
+</div>
+ </div>
+    <!-- TEXT BELOW -->
+    <div class="text-block">
+</div>
+        <br><b>Colour Theory</b><br>
+            Jelle Snijders, Pum van de Koppel<br>
+             <i>20 February – 1 March, 2026</i>
+        </p>
+
+        <p>
+            Self-serious & non-pedagogical, tied in hope of stirring & striding the non-usual affiliates of
+			painting, mounted with a buoyant force on the crisp chamber shores of the up-to-the minute
+			Zorgraum. Bent in attitude of speaking for themselves in the proposed extensive ratio of yet
+			another fractal stance tracery left to unravel in discourse of getting to know this duet. The
+			invitation to peep behind the patch that comprises the abrasion of a joy & struggle amalgamation.
+            <br><br>
+            “Zelven” pluralities of Pum do not uptake the divines of higher “UP,” or aim to score from the
+			pre-conceived bar. Much rather be in exploration of figuring the “Ground’s” metaphysical
+			conundrums. Land of the ceaseless self-contained zipped-up, yet up-beat to dilation.
+            <br><br>
+            In terms of Plan B, Pum’s paintings may appear as the lands that Jelle’s paintings skipped out to
+			voyage onto the new traversing domains, but that is not in the main tactics. In optics of
+			enlarging or “pointing at” accenting gesture it seems to drag the method of incantation. As if
+			Jelle’s pieces grew out like mushrooms in the rain overnight, breezy weak materials that behold
+			the “accidental” to become the proposition for the new. The carved trait of Jelle’s pieces
+			suggests the backstage presence of big scissors that operate as a conductor’s baton, reversing
+			the meaning of the suggested functionality by association.
+            <br><br>
+          	The present force of navigation and equation appears as a strategic peculiarity of alignment
+			betwixt the calculated stance of the viewer and the varying compositions of the over-layering
+			view combinations diced out by means of side-view and in-depth of the Zorgraum’s scope.
+			Another rhyming code takes activation within highlighting the choices of personally brought in
+			colours and replicas of the viewers, cooperating the underlined materiality of the paintings’
+			playful parallelism.
+            <br><br>
+			A non-pops attempt of bringing the transmission of chaos and melancholy that pickpockets any
+			stagnant expectations. “U.F.O.” by Jelle is perhaps one of the second-guessed ways the two
+			artists got here from the bouncy trickstery domain.
+			<br><br><br><br>
+            Documentation by Matej Filipič<br>
+			Text written by Polina Elster
+			<br><br>
+        </p>
+
+        
+                    </small>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
