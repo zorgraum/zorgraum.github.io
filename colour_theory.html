@@ -40,32 +40,79 @@
         }
 
         /* Layout Structure */
-        .wrapper {
-            display: flex;
-            min-height: 100vh;
-        }
+       /* Layout */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
 
-        /* Left Sidebar (Navigation) */
-        nav {
-            flex: 0 0 35%;
-            padding: 2rem;
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            overflow-y: auto;
-            border-right: 1px solid #ffffff;
-            
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-        }
+/* Left sidebar */
+nav {
+    flex: 0 0 35%;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
 
-        /* This pushes the about-section to the bottom */
-        .about-section {
-            margin-top: auto; 
-            padding-bottom: 2rem;
-            font-size: 0.9rem;
-        }
+/* Main content */
+main {
+    flex: 1;
+    min-width: 0;
+    padding: 2rem;
+}
+
+/* About section */
+.about-section {
+    font-size: 0.9rem;
+}
+
+/* Desktop: pin About to the bottom of the sidebar */
+@media (min-width: 769px) {
+    .about-section {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 35%;
+        padding: 0 2rem 2rem;
+        box-sizing: border-box;
+    }
+}
+
+/* Mobile: put About after all page content */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    main {
+        width: 100%;
+        flex: none;
+        padding: 2rem;
+    }
+
+    .about-section {
+        position: static;
+        width: 100%;
+        margin-top: 2rem;
+        padding: 0 2rem 2rem;
+    }
+}
 
         /* Right Content Area */
         main {
