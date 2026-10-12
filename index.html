@@ -31,6 +31,18 @@ body {
     color: #000;
     line-height: 1.4;
 }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
 
 /* 4. Force <b> and <strong> tags to use the specific bold font file */
 b, strong {
@@ -203,8 +215,7 @@ main {
 </head>
 <body>
     <div class="wrapper">
-        <nav>
-            <ul class="show-list">               
+        <nav>              
 				<li class="show-item">
 				    <div class="logo">
 						<a href="/" class="logo-link">zorgraum</a>
